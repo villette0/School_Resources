@@ -1,8 +1,29 @@
-/* Universal selectors first */
-* {
-    background-color: bisque;
+body {
+    background-color: rgb(84, 178, 144);
 }
-/* Element selectors */
-header {
-    color:blue;
+
+main {
+    background-color: rgb(84, 178, 144);
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 40px;
+}
+
+/* Introduction page with the yellow background */
+.hero {
+    height: 300px;
+    margin-top: 80px;
+    margin-left: 80px;
+    margin-right: 80px;
+}
+
+.title {
+    padding-top: 45px;
+}
+
+/* Recommended Books: */
+.recommendations-header {
+    font-size: 25px;
+    font-weight: bold;
+    margin-top: -10px;
 }
