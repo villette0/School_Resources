@@ -171,3 +171,15 @@ function searchHistoryImage() {
             alert('Unable to connect to API');
         });
 }
+
+function displayImage(data) {
+    var imageEl = document.createElement('img');
+    var secret = data.photos.photo[5].secret;
+    var photoId = data.photos.photo[5].id;
+    var serverId = data.photos.photo[5].server;
+
+
+    imageEl.src = "https://live.staticflickr.com/" + serverId + "/" + photoId + "_" + secret + ".jpg";
+    imageEl.classList = 'flickr-img';
+    imageContainer.appendChild(imageEl);
+}
