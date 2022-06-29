@@ -90,3 +90,84 @@ function displayBooks(data) {
     recommendationHeaderEl.appendChild(bookListEl);
     booksContainer.appendChild(recommendationHeaderEl);
 }
+
+//Pulling images, by subject, from the Flickr API
+function searchMathImage() {
+    var apiUrl = 'https://api.flickr.com/services/rest/?method=flickr.photos.search&api_key=02c71edd48d48cb1a4938d2774e11f66&tags=calculus&format=json&nojsoncallback=1';
+
+    fetch(apiUrl)
+        .then(function (response) {
+            if (response.ok) {
+                console.log(response);
+                response.json().then(function (data) {
+                    console.log(data);
+                    displayImage(data);
+                });
+            } else {
+                alert('Error: ' + response.statusText);
+            }
+        })
+        .catch(function (error) {
+            alert('Unable to connect to API');
+        });
+}
+
+function searchScienceImage() {
+    var apiUrl = 'https://api.flickr.com/services/rest/?method=flickr.photos.search&api_key=02c71edd48d48cb1a4938d2774e11f66&tags=chemistry&format=json&nojsoncallback=1';
+
+    fetch(apiUrl)
+        .then(function (response) {
+            if (response.ok) {
+                console.log(response);
+                response.json().then(function (data) {
+                    console.log(data);
+                    displayImage(data);
+                });
+            } else {
+                alert('Error: ' + response.statusText);
+            }
+        })
+        .catch(function (error) {
+            alert('Unable to connect to API');
+        });
+}
+
+function searchLiteratureImage() {
+    var apiUrl = 'https://api.flickr.com/services/rest/?method=flickr.photos.search&api_key=02c71edd48d48cb1a4938d2774e11f66&tags=bookpages&format=json&nojsoncallback=1';
+
+    fetch(apiUrl)
+        .then(function (response) {
+            if (response.ok) {
+                console.log(response);
+                response.json().then(function (data) {
+                    console.log(data);
+                    displayImage(data);
+                });
+            } else {
+                alert('Error: ' + response.statusText);
+            }
+        })
+        .catch(function (error) {
+            alert('Unable to connect to API');
+        });
+}
+
+function searchHistoryImage() {
+    var apiUrl = 'https://api.flickr.com/services/rest/?method=flickr.photos.search&api_key=02c71edd48d48cb1a4938d2774e11f66&tags=history&format=json&nojsoncallback=1';
+
+    fetch(apiUrl)
+        .then(function (response) {
+            if (response.ok) {
+                console.log(response);
+                response.json().then(function (data) {
+                    console.log(data);
+                    displayImage(data);
+                });
+            } else {
+                alert('Error: ' + response.statusText);
+            }
+        })
+        .catch(function (error) {
+            alert('Unable to connect to API');
+        });
+}
