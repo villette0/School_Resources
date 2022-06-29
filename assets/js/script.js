@@ -11,6 +11,7 @@ var savedBooksContainer = document.querySelector('.saved-books-container');
 var heroContainer = document.querySelector('.hero');
 var savedBookListHeader = document.querySelector('.saved-book-list-header');
 var savedBooksUl = document.querySelector('.saved-books-ul');
+var bookTitleArray; //For local storage
 
 //Initial screenload
 document.addEventListener('DOMContentLoaded', hideContainers);
@@ -18,6 +19,45 @@ document.addEventListener('DOMContentLoaded', hideContainers);
 function hideContainers () {
     // In order to initially hide the dotted border on this container
     triviaContainer.style.display = 'none';
+}
+
+function mathFunc() {
+    loadLocalStorage();
+    clearScreen();
+    searchBooks();
+    searchMathImage();
+    searchTriviaMath();
+}
+
+function literatureFunc() {
+    loadLocalStorage();
+    clearScreen();
+    searchBooks();
+    searchLiteratureImage();
+    searchTriviaLiterature();
+}
+
+function scienceFunc() {
+    loadLocalStorage();
+    clearScreen();
+    searchBooks();
+    searchScienceImage();
+    searchTriviaScience();
+}
+
+function historyFunc() {
+    loadLocalStorage();
+    clearScreen();
+    searchBooks();
+    searchHistoryImage();
+    searchTriviaHistory();
+}
+
+function clearScreen() {
+    booksContainer.textContent = '';
+    imageContainer.textContent = '';
+    triviaContainer.textContent = '';
+    heroContainer.remove();
 }
 
 // Subject Button Event listeners
