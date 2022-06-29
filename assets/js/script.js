@@ -42,3 +42,51 @@ function searchBooks() {
             alert('Unable to connect to API');
         });
 }
+
+// Function for populating screen with book list
+function displayBooks(data) {
+    var recommendationHeaderEl = document.createElement('h3');
+    var bookListEl = document.createElement('ul');
+
+    recommendationHeaderEl.textContent = 'Recommended Books:';
+    savedBookListHeader.textContent = 'Saved Book List:';
+
+    recommendationHeaderEl.classList = 'recommendations-header';
+    bookListEl.classList = 'book-list-ul';
+
+
+    var bookArray = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11];
+    for (var i = 0; i < bookArray.length; i++) {
+        var bookListItemEl = document.createElement('li');
+        var bookListImageEl = document.createElement('img');
+        var bookListInfoEl = document.createElement('div');
+        var bookListTitleEl = document.createElement('p');
+        var bookListAuthorEl = document.createElement('p');
+        var saveButton = document.createElement('button');
+
+        bookListImageEl.src = "https://covers.openlibrary.org/b/id/" + data.works[i].cover_id + "-M.jpg"; //M is medium. S would be small. L would be large.
+        bookListTitleEl.textContent = data.works[i].title
+        bookListAuthorEl.textContent = "by " + data.works[i].authors[0].name;
+        saveButton.textContent = 'Save Book';
+
+        bookListItemEl.classList = 'book-list-item';
+        bookListImageEl.classList = 'book-list-image';
+        bookListInfoEl.classList = 'book-list-info-div'
+        bookListTitleEl.classList = 'book-list-title';
+        bookListAuthorEl.classList = 'book-list-author';
+        saveButton.classList = 'save-button';
+
+        bookListInfoEl.appendChild(bookListTitleEl);
+        bookListInfoEl.appendChild(bookListAuthorEl);
+        bookListInfoEl.appendChild(saveButton);
+        bookListItemEl.appendChild(bookListImageEl);
+        bookListItemEl.appendChild(bookListInfoEl);
+        //Attaching list item to universal ul element
+        bookListEl.appendChild(bookListItemEl);
+
+        saveButton.addEventListener('click', addBookToSavedList);
+    }
+
+    recommendationHeaderEl.appendChild(bookListEl);
+    booksContainer.appendChild(recommendationHeaderEl);
+}

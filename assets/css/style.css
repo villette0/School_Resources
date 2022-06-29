@@ -27,3 +27,31 @@ main {
     font-weight: bold;
     margin-top: -10px;
 }
+
+/* Each individual recommended book */
+.book-list-item {
+    display: flex;
+    align-items: center;
+    }
+    
+    .book-list-image {
+        height: 10rem;
+        margin-right: 1rem;
+    }
+    
+    .book-list-title {
+        font-size: 18px;
+        font-weight: bold;
+        font-style: italic;
+    }
+    
+    .book-list-author {
+        font-size: 15px;
+        font-weight: normal;
+        font-style: normal;
+    }
+    
+    .save-button {
+        border-width: 0px;
+        border-radius: 2px;
+    }
