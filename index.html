@@ -20,19 +20,35 @@
 
   <section class="hero is-warning">
     <div class="hero-body is-halfheight">
-        <p class="title">
-            Struggling to stay on top of your school work?
-        </p>
-        <p class="subtitle">
-            Checkout some books to freshen up!
-        </p>
+      <p class="title">
+        Struggling to stay on top of your school work?
+      </p>
+      <p class="subtitle">
+        Checkout some books to freshen up!
+      </p>
     </div>
-</section>
+  </section>
 
   <main>
-    <section>
-      <h2>How are you?</h2>
-    </section>
+    <div class='display-container columns'>
+      <div class="image-trivia-savedbooks-container column is-half">
+        <div class="image-container">
+          <!-- Image will populate here -->
+        </div>
+        <div class="trivia-container">
+          <!-- Trivia question will populate here -->
+        </div>
+        <div class="saved-books-container">
+          <h3 class="saved-book-list-header"></h3>
+          <!-- saved book list will populate here -->
+          <ul class="saved-books-ul"></ul>
+        </div>
+      </div>
+
+      <div id="display" class="books-container column is-half">
+        <!-- Books will populate here -->
+      </div>
+    </div>
   </main>
 
   <script src="./assets/js/script.js"></script>
