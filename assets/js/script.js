@@ -12,6 +12,14 @@ var heroContainer = document.querySelector('.hero');
 var savedBookListHeader = document.querySelector('.saved-book-list-header');
 var savedBooksUl = document.querySelector('.saved-books-ul');
 
+//Initial screenload
+document.addEventListener('DOMContentLoaded', hideContainers);
+
+function hideContainers () {
+    // In order to initially hide the dotted border on this container
+    triviaContainer.style.display = 'none';
+}
+
 // Subject Button Event listeners
 mathButton.addEventListener('click', mathFunc);
 literatureButton.addEventListener('click', literatureFunc);
