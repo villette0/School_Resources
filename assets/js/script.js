@@ -263,3 +263,51 @@ function searchTriviaHistory() {
             alert('Unable to connect to API');
         });
 }
+
+// Displaying a trivia question and true/false option to the screen
+function displayTrivia(data) {
+    // Now show the border
+    triviaContainer.style.display = 'block';
+
+    var triviaDescription = document.createElement('p');
+    var triviaQuestionEl = document.createElement('p');
+    var triviaDirectionsEl = document.createElement('p');
+    var buttonContainer = document.createElement('div');
+    var trueButtonEl = document.createElement('button');
+    var falseButtonEl = document.createElement('button');
+
+    triviaDescription.textContent = 'Trivia Question:';
+    triviaQuestionEl.textContent = data.results[0].question;
+    triviaDirectionsEl.textContent = "(Hover over your choice to see if you're correct)";
+    trueButtonEl.textContent = "True";
+    falseButtonEl.textContent = "False";
+
+    triviaDescription.classList = 'trivia-description';
+    triviaQuestionEl.classList = 'trivia-question';
+
+    var correct = data.results[0].correct_answer;
+    var trueButtonText = trueButtonEl.textContent;
+    var falseButtonText = falseButtonEl.textContent;
+
+    // If correct, the answer will be green on hover. If wrong, it will be red.
+    if (trueButtonText === correct) {
+        trueButtonEl.classList = "correct";
+    }
+    else {
+        trueButtonEl.classList = "wrong";
+    }
+
+    if (falseButtonText === correct) {
+        falseButtonEl.classList = "correct";
+    }
+    else {
+        falseButtonEl.classList = "wrong";
+    }
+
+    triviaContainer.appendChild(triviaDescription);
+    triviaContainer.appendChild(triviaQuestionEl);
+    triviaContainer.appendChild(triviaDirectionsEl);
+    buttonContainer.appendChild(trueButtonEl);
+    buttonContainer.appendChild(falseButtonEl);
+    triviaContainer.appendChild(buttonContainer);
+}
