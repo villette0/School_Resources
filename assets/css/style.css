@@ -1,3 +1,9 @@
+:root {
+    --gray: rgb(184, 184, 184);
+    --green: rgb(65, 212, 65);
+    --red: rgb(255, 0, 0);
+}
+
 body {
     background-color: rgb(84, 178, 144);
 }
@@ -28,39 +34,49 @@ main {
     margin-top: -10px;
 }
 
+/* Grid/Columns of recommended books */
+.book-list-ul {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 2fr);
+    grid-template-rows: repeat(6, 175px);
+    grid-gap: 5px;
+    grid-auto-flow: dense;
+}
+
 /* Each individual recommended book */
 .book-list-item {
     display: flex;
     align-items: center;
-    }
-    
-    .book-list-image {
-        height: 10rem;
-        margin-right: 1rem;
-    }
-    
-    .book-list-title {
-        font-size: 18px;
-        font-weight: bold;
-        font-style: italic;
-    }
-    
-    .book-list-author {
-        font-size: 15px;
-        font-weight: normal;
-        font-style: normal;
-    }
-    
-    .save-button {
-        border-width: 0px;
-        border-radius: 2px;
-    }
+}
+
+.book-list-image {
+    height: 10rem;
+    margin-right: 1rem;
+}
+
+.book-list-title {
+    font-size: 18px;
+    font-weight: bold;
+    font-style: italic;
+}
+
+.book-list-author {
+    font-size: 15px;
+    font-weight: normal;
+    font-style: normal;
+}
+
+.save-button {
+    border-width: 0px;
+    border-radius: 2px;
+}
 
 /* This is hidden on the main page and displayed when a subject button is pressed in order to hide border */
 .trivia-container {
     border-width: 5px;
     border-color: rgb(84, 74, 74);
-    border-style:dotted;
+    border-style: dotted;
     padding: 20px;
     width: 380px;
     margin-left: 40px;
@@ -112,9 +128,21 @@ body div.columns {
 .correct:hover::after {
     background-color: var(--green);
     content: " ✅";
-    
 }
 
 .wrong:hover {
-    background-color:var(--red);
+    background-color: var(--red);
+}
+
+.saved-book-list-header {
+    margin-top: 20px;
+    font-weight: bold;
+    font-size: 30px;
+}
+
+/* Title of books in saved books list to the left */
+.saved-book-item {
+    font-size: 24px;
+    font-style: italic;
+    font-weight: normal;
 }

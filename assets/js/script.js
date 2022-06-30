@@ -21,6 +21,12 @@ function hideContainers () {
     triviaContainer.style.display = 'none';
 }
 
+// Subject Button Event listeners
+mathButton.addEventListener('click', mathFunc);
+literatureButton.addEventListener('click', literatureFunc);
+scienceButton.addEventListener('click', scienceFunc);
+historyButton.addEventListener('click', historyFunc);
+
 function mathFunc() {
     loadLocalStorage();
     clearScreen();
@@ -59,12 +65,6 @@ function clearScreen() {
     triviaContainer.textContent = '';
     heroContainer.remove();
 }
-
-// Subject Button Event listeners
-mathButton.addEventListener('click', mathFunc);
-literatureButton.addEventListener('click', literatureFunc);
-scienceButton.addEventListener('click', scienceFunc);
-historyButton.addEventListener('click', historyFunc);
 
 // Grabs data from library api and then displays book results
 function searchBooks() {
