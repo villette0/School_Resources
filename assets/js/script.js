@@ -139,6 +139,52 @@ function displayBooks(data) {
     booksContainer.appendChild(recommendationHeaderEl);
 }
 
+// Saves book to local storage. Within saveToLocalStorage is the function for loading local storage as well which also appends the list from local storage.
+function addBookToSavedList(event) {
+    var bookText = event.target.parentElement.childNodes[0].innerText;
+    saveToLocalStorage(bookText);
+}
+
+function saveToLocalStorage(bookTitle) {
+    // Only add a book to the local storage array if it isn't already there
+    if (!bookTitleArray.includes(bookTitle)) {
+        bookTitleArray.push(bookTitle);
+        localStorage.setItem('Book Title', JSON.stringify(bookTitleArray));
+    }
+    loadLocalStorage();
+}
+
+// To prevent duplicate lists, removing the li's from the ul first
+function removeChilds(parent) {
+    while (parent.lastChild) {
+        parent.removeChild(parent.lastChild);
+    }
+}
+
+function loadLocalStorage() {
+    removeChilds(savedBooksUl);
+
+    if (localStorage.getItem('Book Title') === null) {
+        bookTitleArray = [];
+    }
+    else {
+        bookTitleArray = JSON.parse(localStorage.getItem('Book Title'));
+    }
+    // For each book title, add it to the list on the screen
+    bookTitleArray.forEach((bookTitle) => appendBook(bookTitle));
+}
+
+// Adding book to saved list on screen for user
+function appendBook(bookTitle) {
+    var savedBookItem = document.createElement('li');
+
+    savedBookItem.classList = 'saved-book-item';
+    savedBookItem.textContent = bookTitle;
+
+    savedBooksUl.appendChild(savedBookItem);
+}
+
+
 //Pulling images, by subject, from the Flickr API
 function searchMathImage() {
     var apiUrl = 'https://api.flickr.com/services/rest/?method=flickr.photos.search&api_key=02c71edd48d48cb1a4938d2774e11f66&tags=calculus&format=json&nojsoncallback=1';
