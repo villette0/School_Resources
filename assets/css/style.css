@@ -4,27 +4,30 @@
     --red: rgb(255, 0, 0);
 }
 
-body {
-    background-color: rgb(84, 178, 144);
+.hero-background {
+    background-image: url(../images/bluescircles.jpg);
+    padding: 30px;
+}
+
+.hero {
+    background-color: rgba(210, 219, 231, 0.372);
+    height: 300px;
+    margin: 80px;
+    border-radius: 8px;
 }
 
 main {
-    background-color: rgb(84, 178, 144);
-    padding-left: 20px;
-    padding-right: 20px;
-    padding-top: 40px;
-}
-
-/* Introduction page with the yellow background */
-.hero {
-    height: 300px;
-    margin-top: 80px;
-    margin-left: 80px;
-    margin-right: 80px;
+    background-image: url(../images/bluescircles.jpg);
+    padding: 40px 20px;
 }
 
 .title {
     padding-top: 45px;
+}
+
+.display-container {
+    /* top right bottom left */
+    margin: 2px 20px 50px 20px;
 }
 
 /* Recommended Books: */
@@ -32,6 +35,12 @@ main {
     font-size: 25px;
     font-weight: bold;
     margin-top: -10px;
+}
+
+.books-container {
+    background-color: rgba(210, 219, 231, 0.372);
+    border-radius: 10px;;
+    border: 2px;
 }
 
 /* Grid/Columns of recommended books */
@@ -72,14 +81,23 @@ main {
     border-radius: 2px;
 }
 
+.image-trivia-savedbooks-container {
+    display: block;
+    justify-content: center;
+}
+
+.image-container {
+    text-align: center;
+}
+
 /* This is hidden on the main page and displayed when a subject button is pressed in order to hide border */
 .trivia-container {
-    border-width: 5px;
-    border-color: rgb(84, 74, 74);
-    border-style: dotted;
+    background-color: rgba(210, 219, 231, 0.372);
+    border-radius: 10px;;
+    border: 2px;
+    width: 80%;
     padding: 20px;
     width: 380px;
-    margin-left: 40px;
     margin-top: 20px;
     text-align: center;
 }
@@ -132,6 +150,21 @@ body div.columns {
 
 .wrong:hover {
     background-color: var(--red);
+}
+
+.wrong:hover::after {
+    background-color: var(--red);
+    content: " ✖️";
+}
+
+.saved-books-container {
+    background-color: rgba(210, 219, 231, 0.372);
+    border-radius: 10px;;
+    border: 2px;
+    width: 90%;
+    height: 200px;
+    padding: .5px 20px;
+    margin-top: 20px;
 }
 
 .saved-book-list-header {

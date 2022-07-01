@@ -4,11 +4,12 @@ var mathButton = document.querySelector('.math-button');
 var literatureButton = document.querySelector('.literature-button');
 var scienceButton = document.querySelector('.science-button');
 var historyButton = document.querySelector('.history-button');
+var main = document.querySelector('.main');
 var booksContainer = document.querySelector('.books-container');
 var imageContainer = document.querySelector('.image-container');
 var triviaContainer = document.querySelector('.trivia-container');
 var savedBooksContainer = document.querySelector('.saved-books-container');
-var heroContainer = document.querySelector('.hero');
+var heroContainer = document.querySelector('.hero-background');
 var savedBookListHeader = document.querySelector('.saved-book-list-header');
 var savedBooksUl = document.querySelector('.saved-books-ul');
 var bookTitleArray; //For local storage
@@ -17,8 +18,8 @@ var bookTitleArray; //For local storage
 document.addEventListener('DOMContentLoaded', hideContainers);
 
 function hideContainers () {
-    // In order to initially hide the dotted border on this container
-    triviaContainer.style.display = 'none';
+// Initially hide the other containers
+    main.style.display = 'none';
 }
 
 // Subject Button Event listeners
@@ -64,6 +65,8 @@ function clearScreen() {
     imageContainer.textContent = '';
     triviaContainer.textContent = '';
     heroContainer.remove();
+    // Now show the other containers
+    main.style.display = 'flex';
 }
 
 // Grabs data from library api and then displays book results
@@ -141,7 +144,7 @@ function displayBooks(data) {
 
 // Saves book to local storage. Within saveToLocalStorage is the function for loading local storage as well which also appends the list from local storage.
 function addBookToSavedList(event) {
-    var bookText = event.target.parentElement.childNodes[0].innerText;
+    var bookText = event.target.parentElement.childNodes[0].innerText + " " + event.target.parentElement.childNodes[1].innerText;
     saveToLocalStorage(bookText);
 }
 
@@ -360,19 +363,14 @@ function searchTriviaHistory() {
 
 // Displaying a trivia question and true/false option to the screen
 function displayTrivia(data) {
-    // Now show the border
-    triviaContainer.style.display = 'block';
-
     var triviaDescription = document.createElement('p');
     var triviaQuestionEl = document.createElement('p');
-    var triviaDirectionsEl = document.createElement('p');
     var buttonContainer = document.createElement('div');
     var trueButtonEl = document.createElement('button');
     var falseButtonEl = document.createElement('button');
 
     triviaDescription.textContent = 'Trivia Question:';
     triviaQuestionEl.textContent = data.results[0].question;
-    triviaDirectionsEl.textContent = "(Hover over your choice to see if you're correct)";
     trueButtonEl.textContent = "True";
     falseButtonEl.textContent = "False";
 
@@ -400,7 +398,6 @@ function displayTrivia(data) {
 
     triviaContainer.appendChild(triviaDescription);
     triviaContainer.appendChild(triviaQuestionEl);
-    triviaContainer.appendChild(triviaDirectionsEl);
     buttonContainer.appendChild(trueButtonEl);
     buttonContainer.appendChild(falseButtonEl);
     triviaContainer.appendChild(buttonContainer);
