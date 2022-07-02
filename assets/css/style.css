@@ -81,13 +81,18 @@ main {
     border-radius: 2px;
 }
 
-.image-trivia-savedbooks-container {
+/* .image-trivia-savedbooks-container {
     display: block;
     justify-content: center;
-}
+} */
 
 .image-container {
     text-align: center;
+}
+
+.center-trivia {
+    display: flex;
+    justify-content: center;
 }
 
 /* This is hidden on the main page and displayed when a subject button is pressed in order to hide border */
@@ -157,12 +162,17 @@ body div.columns {
     content: " ✖️";
 }
 
+.center-savedbooks {
+    display: flex;
+    justify-content: center;
+}
+
 .saved-books-container {
     background-color: rgba(210, 219, 231, 0.372);
     border-radius: 10px;;
     border: 2px;
     width: 90%;
-    height: 200px;
+    min-height: 200px;
     padding: .5px 20px;
     margin-top: 20px;
 }
