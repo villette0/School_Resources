@@ -2,6 +2,7 @@
     --gray: rgb(184, 184, 184);
     --green: rgb(65, 212, 65);
     --red: rgb(255, 0, 0);
+    --opaqueBackground: rgba(210, 219, 231, 0.372);
 }
 
 .hero-background {
@@ -10,7 +11,7 @@
 }
 
 .hero {
-    background-color: rgba(210, 219, 231, 0.372);
+    background-color: var(--opaqueBackground);
     height: 300px;
     margin: 80px;
     border-radius: 8px;
@@ -38,7 +39,7 @@ main {
 }
 
 .books-container {
-    background-color: rgba(210, 219, 231, 0.372);
+    background-color: var(--opaqueBackground);
     border-radius: 10px;;
     border: 2px;
 }
@@ -81,11 +82,6 @@ main {
     border-radius: 2px;
 }
 
-/* .image-trivia-savedbooks-container {
-    display: block;
-    justify-content: center;
-} */
-
 .image-container {
     text-align: center;
 }
@@ -97,7 +93,7 @@ main {
 
 /* This is hidden on the main page and displayed when a subject button is pressed in order to hide border */
 .trivia-container {
-    background-color: rgba(210, 219, 231, 0.372);
+    background-color: var(--opaqueBackground);
     border-radius: 10px;;
     border: 2px;
     width: 80%;
@@ -168,7 +164,7 @@ body div.columns {
 }
 
 .saved-books-container {
-    background-color: rgba(210, 219, 231, 0.372);
+    background-color: var(--opaqueBackground);
     border-radius: 10px;;
     border: 2px;
     width: 90%;
