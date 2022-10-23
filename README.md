@@ -49,10 +49,11 @@ The JavaScript document includes:
 * three API's that have data fetched and utilized to be displayed on the screen via user input
 * localStorage saving, retrieval, and displaying
 
-## Languages
+## Languages & Tech
 - HTML
 - CSS
 - JavaScript
+- API's: Flickr, Open Library, Open Trivia Database
 
 ## Links
 * [Deployed-webpage](https://villettec.github.io/School_Resources/)
@@ -60,7 +61,8 @@ The JavaScript document includes:
 * [Repository](https://github.com/villettec/School_Resources)
 
 ## Screenshot
-![Image](./assets/imgs/readme-screenshot.png)
+![Image](./assets/images/readme-screenshot.png)
+![Image](./assets/images/readme-screenshot2.png)
 
 ## Credit
 Villette Comfort
