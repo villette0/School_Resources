@@ -5,8 +5,17 @@
     --opaqueBackground: rgba(210, 219, 231, 0.372);
 }
 
+body {
+    background-image: url('../images/books.jpeg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+}
+
 .hero-background {
-    background-image: url(../images/bluescircles.jpg);
+    background-image: url('../images/books.jpeg');
     padding: 30px;
 }
 
@@ -15,11 +24,6 @@
     height: 300px;
     margin: 80px;
     border-radius: 8px;
-}
-
-main {
-    background-image: url(../images/bluescircles.jpg);
-    padding: 40px 20px;
 }
 
 .title {
