@@ -51,6 +51,7 @@ body {
     background-color: var(--opaqueBackground);
     border-radius: 10px;;
     border: 2px;
+    margin-bottom: 5vh;
 }
 
 /* Grid/Columns of recommended books */
