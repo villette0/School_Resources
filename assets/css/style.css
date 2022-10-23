@@ -11,7 +11,7 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     color: white;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Montserrat Alternates', sans-serif;
 }
 
 .hero-background {
@@ -28,11 +28,16 @@ body {
 
 .title {
     padding-top: 45px;
+    font-size: 3rem;
+}
+
+.subtitle {
+    font-size: 1.5rem;
 }
 
 .display-container {
     /* top right bottom left */
-    margin: 2px 20px 50px 20px;
+    margin: 5vh 1vw 20vh 1vw;
 }
 
 /* Recommended Books: */
@@ -70,7 +75,7 @@ body {
 }
 
 .book-list-title {
-    font-size: 18px;
+    font-size: 1rem;
     font-weight: bold;
     font-style: italic;
 }
@@ -82,8 +87,12 @@ body {
 }
 
 .save-button {
+    margin-top: 1vh;
     border-width: 0px;
     border-radius: 2px;
+    background: rgba(0, 0, 0, 0.229);
+    padding: .5vh .5vw;
+    font-size: 1rem !important;
 }
 
 .image-container {
@@ -102,7 +111,6 @@ body {
     border: 2px;
     width: 80%;
     padding: 20px;
-    width: 380px;
     margin-top: 20px;
     text-align: center;
 }
@@ -171,7 +179,7 @@ body div.columns {
     background-color: var(--opaqueBackground);
     border-radius: 10px;;
     border: 2px;
-    width: 90%;
+    width: 80%;
     min-height: 200px;
     padding: .5px 20px;
     margin-top: 20px;
