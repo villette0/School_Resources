@@ -4,6 +4,10 @@
     --red: rgb(255, 0, 0);
     --opaqueBackground: rgba(210, 219, 231, 0.372);
 }
+body {
+  font-family: 'Montserrat Alternates', sans-serif;
+}
+
 
 main {
     background-image: url('../images/books.jpeg');
