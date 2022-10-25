@@ -1,10 +1,10 @@
 // Universal Variables
-var main = document.querySelector('.main');
+var everythingElse = document.querySelector('.everything-but-animation');
+var bookAnimation = document.querySelector('.book-animation')
 var mathButton = document.querySelector('.math-button');
 var literatureButton = document.querySelector('.literature-button');
 var scienceButton = document.querySelector('.science-button');
 var historyButton = document.querySelector('.history-button');
-var main = document.querySelector('.main');
 var booksContainer = document.querySelector('.books-container');
 var imageContainer = document.querySelector('.image-container');
 var triviaContainer = document.querySelector('.trivia-container');
@@ -19,7 +19,7 @@ document.addEventListener('DOMContentLoaded', hideContainers);
 
 function hideContainers () {
 // Initially hide the other containers
-    main.style.display = 'none';
+everythingElse.style.display = 'none';
 }
 
 // Subject Button Event listeners
@@ -66,7 +66,8 @@ function clearScreen() {
     triviaContainer.textContent = '';
     heroContainer.remove();
     // Now show the other containers
-    main.style.display = 'flex';
+    everythingElse.style.display = 'flex';
+    bookAnimation.style.display = 'none';
 }
 
 // Grabs data from library api and then displays book results

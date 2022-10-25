@@ -7,6 +7,7 @@
   <meta name="description" content="Generator to help find resources for different school subjects.">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates&display=swap" rel="stylesheet">  <link rel="stylesheet" href="./assets/css/reset.css" />
   <!-- Bulma Documentation: https://bulma.io/documentation/overview/classes/ -->
+  <link rel="stylesheet" href="./assets/css/reset.css" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css" />
   <link rel="stylesheet" href="./assets/css/style.css" />
 </head>
@@ -28,11 +29,77 @@
         <h2 class="subtitle">
           Checkout some books to freshen up!
         </h2>
+
+    <div class="book-animation">
+      <div id='book'>
+        <div id='top'></div>
+        <div id='front'></div>
+        <div id='right'></div>
+        <div id='bottom'></div>
+        <div id='shadow'></div>
+        <div id='bookmark'>
+          <div>
+            <div>
+              <div>
+                <div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id='bookmark-shadow'></div>
+      </div>
+      <div id='flip'>
+        <div id='front'>
+          <div>
+            <div>
+              <div>
+                <div>
+                  <div>
+                    <div>
+                      <div>
+                        <div>
+                          <div>
+                            <div></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id='back'>
+          <div>
+            <div>
+              <div>
+                <div>
+                  <div>
+                    <div>
+                      <div>
+                        <div>
+                          <div>
+                            <div></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
+  </div>
+  </div>
+
   </section>
 
   <main class="main">
+    <div class="everything-but-animation">
     <div class='display-container columns'>
       <div class="image-trivia-savedbooks-container column is-half">
       
@@ -53,15 +120,15 @@
           <ul class="saved-books-ul"></ul>
         </div>
         </div>
-
       </div>
 
       <div id="display" class="books-container column is-half">
         <!-- Books will populate here -->
       </div>
     </div>
-  </main>
+  </div>
 
+  </main>
   <script src="./assets/js/script.js"></script>
 </body>
 
