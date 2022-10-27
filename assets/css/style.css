@@ -73,8 +73,8 @@ main {
     width: 100%;
     display: grid;
     grid-template-columns: repeat(2, 2fr);
-    grid-template-rows: repeat(6, 175px);
-    grid-gap: 5px;
+    grid-template-rows: repeat(6, 1fr);
+    grid-gap: .1em;
     grid-auto-flow: dense;
 }
 
@@ -90,13 +90,13 @@ main {
 }
 
 .book-list-title {
-    font-size: 1rem;
+    font-size: 1.4vw;
     font-weight: bold;
     font-style: italic;
 }
 
 .book-list-author {
-    font-size: 15px;
+    font-size: 1.4vw;
     font-weight: normal;
     font-style: normal;
 }
@@ -207,12 +207,12 @@ body div.columns {
 .saved-book-list-header {
     margin-top: 20px;
     font-weight: bold;
-    font-size: 30px;
+    font-size: 1.3em;
 }
 
 /* Title of books in saved books list to the left */
 .saved-book-item {
-    font-size: 24px;
+    font-size: 1em;
     font-style: italic;
     font-weight: normal;
 }
@@ -467,4 +467,16 @@ body div.columns {
     position: absolute;
     transform: translate3d(12px,350px,-25px) rotateX(-90deg) skewX(20deg);
     transform-origin: 0 0;
+  }
+
+  @media screen 
+  and (max-width: 1090px)  {
+    .book-list-ul {
+      width: 100%;
+      display: grid;
+      grid-template-columns: repeat(1, 1fr);
+      grid-template-rows: repeat(12, 1fr);
+      grid-gap: .1em;
+      grid-auto-flow: dense;
+  }
   }
