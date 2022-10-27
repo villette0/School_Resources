@@ -121,7 +121,7 @@ function displayBooks(data) {
         bookListAuthorEl.textContent = "by " + data.works[i].authors[0].name;
         saveButton.textContent = 'Save Book';
 
-        bookListItemEl.classList = 'book-list-item col-lg-12 col-md-6';
+        bookListItemEl.classList = 'book-list-item';
         bookListImageEl.classList = 'book-list-image';
         bookListInfoEl.classList = 'book-list-info-div'
         bookListTitleEl.classList = 'book-list-title';
@@ -139,8 +139,8 @@ function displayBooks(data) {
         saveButton.addEventListener('click', addBookToSavedList);
     }
 
-    recommendationHeaderEl.appendChild(bookListEl);
     booksContainer.appendChild(recommendationHeaderEl);
+    booksContainer.appendChild(bookListEl);
 }
 
 // Saves book to local storage. Within saveToLocalStorage is the function for loading local storage as well which also appends the list from local storage.

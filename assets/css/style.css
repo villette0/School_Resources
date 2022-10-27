@@ -52,13 +52,14 @@ main {
 
 .display-container {
     /* top right bottom left */
-    margin: 5vh 1vw 20vh 1vw;
+    margin: 5vh 1vw 5vh 1vw;
 }
 
 /* Recommended Books: */
 .recommendations-header {
     font-size: 2rem;
     font-weight: bold;
+    margin-bottom: 3vh;
 }
 
 .books-container {
@@ -70,11 +71,11 @@ main {
 
 /* Grid/Columns of recommended books */
 .book-list-ul {
-    width: 100%;
+  width: 100%;
     display: grid;
     grid-template-columns: repeat(2, 2fr);
-    grid-template-rows: repeat(6, 1fr);
-    grid-gap: .1em;
+    grid-template-rows: repeat(6, 6fr);
+    grid-gap: 1em;
     grid-auto-flow: dense;
 }
 
@@ -470,13 +471,18 @@ body div.columns {
   }
 
   @media screen 
-  and (max-width: 1090px)  {
-    .book-list-ul {
-      width: 100%;
-      display: grid;
-      grid-template-columns: repeat(1, 1fr);
-      grid-template-rows: repeat(12, 1fr);
-      grid-gap: .1em;
-      grid-auto-flow: dense;
-  }
+  and (max-width: 990px)  {
+.image-container img {
+width: 80vw;
+}
+.books-container {
+  margin-top: 3vh;
+}
+.book-list-item {
+  width: 100%
+}
+.book-list-image {
+  width: 20vw;
+  height: auto
+}
   }
