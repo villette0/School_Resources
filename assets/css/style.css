@@ -18,8 +18,13 @@ main {
     font-family: 'Montserrat Alternates', sans-serif;
 }
 
+.btn {
+  height: 7vh;
+  font-size: 1.5rem;
+}
+
 .hero-background {
-    background-image: url('../images/wood.jpg');
+    background-image: url('../images/teal.jpg');
     padding: 30px;
     background-position: center;
     background-repeat: no-repeat;
@@ -29,18 +34,20 @@ main {
 
 .hero {
     background-color: rgba(227, 207, 207, 0.64);
-    height: 300px;
-    margin: 80px;
+    height: 50vh;
+    margin: 10vw 10vh;
     border-radius: 8px;
 }
 
 .title {
-    padding-top: 45px;
-    font-size: 3rem;
+    padding-top: 10vh;
+    padding-left: 2vw;
+    font-size: 3em;
 }
 
 .subtitle {
-    font-size: 1.5rem;
+    font-size: 1.5em;
+    padding-left: 2vw;
 }
 
 .display-container {
@@ -50,9 +57,8 @@ main {
 
 /* Recommended Books: */
 .recommendations-header {
-    font-size: 25px;
+    font-size: 2rem;
     font-weight: bold;
-    margin-top: -10px;
 }
 
 .books-container {
@@ -106,6 +112,10 @@ main {
 
 .image-container {
     text-align: center;
+}
+
+.image-container img {
+  width: 40vw;
 }
 
 .center-trivia {
