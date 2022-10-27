@@ -74,7 +74,7 @@ main {
   width: 100%;
     display: grid;
     grid-template-columns: repeat(2, 2fr);
-    grid-template-rows: repeat(6, 6fr);
+    grid-template-rows: repeat(6);
     grid-gap: 1em;
     grid-auto-flow: dense;
 }
@@ -131,7 +131,7 @@ main {
     border: 2px;
     width: 80%;
     padding: 20px;
-    margin-top: 20px;
+    margin-top: 3vh;
     text-align: center;
 }
 
@@ -141,9 +141,8 @@ main {
 }
 
 .trivia-question {
-    max-width: 500px;
-    font-size: 18px;
-    margin-top: 5px;
+    font-size: 1.5vw;;
+    margin-top: 5vh;
 }
 
 /* Removed white gap under buttons from bulma, but it could also have been removed by adding background color to body */
@@ -202,7 +201,7 @@ body div.columns {
     width: 80%;
     min-height: 200px;
     padding: .5px 20px;
-    margin-top: 20px;
+    margin-top: 3vh;
 }
 
 .saved-book-list-header {
@@ -475,6 +474,9 @@ body div.columns {
 .image-container img {
 width: 80vw;
 }
+.book-list-author, .book-list-title {
+  font-size: 3vw;
+}
 .books-container {
   margin-top: 3vh;
 }
@@ -484,5 +486,9 @@ width: 80vw;
 .book-list-image {
   width: 20vw;
   height: auto
+}
+.recommendations-header {
+  margin-top: 1vh;
+  margin-bottom: 1vh;
 }
   }
