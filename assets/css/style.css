@@ -476,11 +476,24 @@ font-size: 3vw;
     .image-container img {
 width: 80vw;
 }
+.trivia-container {
+  width: 90%;
+}
  .trivia-description {
   font-size: 4vw;;
 }
 .trivia-question {
   margin-top: 0vh;
+  font-size: 3vw;
+}
+.saved-books-container {
+  width: 90%;
+}
+.saved-book-list-header
+{
+  font-size: 4vw;
+}
+.saved-book-item {
   font-size: 3vw;
 }
 .book-list-author, .book-list-title {
