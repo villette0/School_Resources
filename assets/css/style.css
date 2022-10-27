@@ -503,6 +503,8 @@ width: 80vw;
 .save-button {
   width: 20vw; 
   font-size: 25px !important;
+  text-decoration: none !important;
+  color: white;
 }
 .book-list-author, .book-list-title {
   font-size: 3vw;
