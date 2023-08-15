@@ -56,15 +56,10 @@ The JavaScript document includes:
 - API's: Flickr, Open Library, Open Trivia Database
 
 ## Links
-* [Deployed-webpage](https://villettec.github.io/School_Resources/)
+* [Deployed-webpage](https://villette0.github.io/School_Resources/)
 
-* [Repository](https://github.com/villettec/School_Resources)
+* [Repository](https://github.com/villette0/School_Resources)
 
 ## Screenshot
 ![Image](./assets/images/readme-screenshot.png)
 ![Image](./assets/images/readme-screenshot2.png)
-
-## Credit
-Villette Comfort
-
-villette@live.com
